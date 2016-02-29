@@ -1,4 +1,4 @@
-BrowserStack-rspec
+rspec-browserstack
 =========
 
 This repository provides information and helpful tweaks to run your Rspec tests on the BrowserStack selenium cloud infrastructure.

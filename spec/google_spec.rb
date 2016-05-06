@@ -1,5 +1,6 @@
 require_relative './spec_helper.rb'
- 
+require 'selenium-webdriver'
+
 describe "Google's Search Functionality" do
   it "can find search results", :run_on_browserstack => true do
     @driver.manage.timeouts.implicit_wait = 10

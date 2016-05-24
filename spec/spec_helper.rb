@@ -2,7 +2,7 @@ require 'rspec'
 require_relative './browserstack_driver.rb'
 require 'browserstack/local'
 
-BROWSERSTACK_ACCESS_KEY = ENV['BROWSERSTACK_KEY']
+BROWSERSTACK_ACCESS_KEY = ENV['BROWSERSTACK_ACCESS_KEY']
 run_local = false
 
 RSpec.configure do |config|

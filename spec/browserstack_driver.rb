@@ -16,7 +16,7 @@ module BrowserStackDriver
         "os_version": "7"
       }
     end
- 
+
     def new_driver
       Selenium::WebDriver.for :remote, :url => browserstack_endpoint, :desired_capabilities => caps
     end

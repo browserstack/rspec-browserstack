@@ -3,15 +3,11 @@ require 'selenium-webdriver'
 
 describe "Google's Search Functionality" do
   it "can find search results", :run_on_browserstack => true do
-    @driver.manage.timeouts.implicit_wait = 10
-    @driver.navigate.to "http://www.google.com"
- 
-    raise "Unable to load Google." unless @driver.title.include? "Google"
- 
-    query = @driver.find_element :name, "q"
-    query.send_keys "BrowserStack"
-    query.submit
- 
-    puts @driver.title
+    @driver.navigate.to "https://www.google.com/ncr"
+    element = @driver.find_element(:name, 'q')
+    element.send_keys "BrowserStack"
+    element.submit
+    sleep 2
+    expect(@driver.title).to eql("BrowserStack - Google Search")
   end
 end

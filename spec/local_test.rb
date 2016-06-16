@@ -1,4 +1,4 @@
-require_relative '../scripts/spec_helper.rb'
+require_relative '../scripts/browserstack.rb'
 
 describe "Google's Search Functionality" do
   it "can find search results", :enable_local => true do

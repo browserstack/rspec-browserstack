@@ -4,8 +4,8 @@ require 'selenium-webdriver'
 require 'browserstack/local'
 
 CONFIG = YAML.load(File.read(File.join(File.dirname(__FILE__),'../config.yml')))
-CONFIG['user'] ||= ENV['BROWSERSTACK_USERNAME']
-CONFIG['key'] ||= ENV['BROWSERSTACK_ACCESS_KEY']
+CONFIG['user'] = ENV['BROWSERSTACK_USERNAME'] || CONFIG['user']
+CONFIG['key'] = ENV['BROWSERSTACK_ACCESS_KEY'] || CONFIG['key']
 
 RSpec.configure do |config|
   config.around(:example) do |example|

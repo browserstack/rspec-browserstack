@@ -7,9 +7,7 @@ GEM
     diff-lcs (1.2.5)
     ffi (1.9.10)
     multi_json (1.11.2)
-    parallel (0.9.1)
-    parallel_tests (0.16.5)
-      parallel
+    parallel (1.9.0)
     rake (11.1.2)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
@@ -37,7 +35,7 @@ PLATFORMS
 
 DEPENDENCIES
   browserstack-local
-  parallel_tests
+  parallel
   rake
   rspec
   rspec-core (~> 3.4.4)

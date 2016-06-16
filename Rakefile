@@ -7,4 +7,10 @@ RSpec::Core::RakeTask.new(:single) do |t|
   t.verbose = false
 end
 
+RSpec::Core::RakeTask.new(:local) do |t|
+  t.pattern = Dir.glob('spec/local_test.rb')
+  t.rspec_opts = '--format documentation'
+  t.verbose = false
+end
+
 task :default => :single

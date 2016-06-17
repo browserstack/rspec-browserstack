@@ -1,31 +1,12 @@
 # rspec-browserstack
 
-Execute [Rspec](http://rspec.info/) scripts on BrowserStack.
+[Rspec](http://rspec.info/) Integration with BrowserStack.
 
-## Usage
+## Setup
 
-### Prerequisites
-
-Ruby and Bundler
-
-### Clone the repo
-
-`git clone https://github.com/browserstack/rspec-browserstack`
-
-### Install dependencies
-
-Navigate to appropriate directory for testing and then install the dependencies by running
-
-`bundle install`
-
-### BrowserStack Authentication
-
-Export the environment variables for the username and access key of your BrowserStack account.
-These can be found on the automate accounts page on [BrowserStack](https://www.browserstack.com/accounts/automate)
-
-`export BROWSERSTACK_USERNAME=<browserstack-username>`
-
-`export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>`
+Clone the repo
+Install dependencies `bundle install`
+Update `congif.yml` with your BrowserStack credentials `user` and `key`
 
 ### Run the tests
 
@@ -38,6 +19,3 @@ These can be found on the automate accounts page on [BrowserStack](https://www.b
 - You can increase n to increase the number of tests to run in parallel.
 - To run local tests, set run_local = true in spec/spec_helper.rb file.  
 
-#### How to specify the capabilities
-
-The [Code Generator](https://www.browserstack.com/automate/ruby#setting-os-and-browser) can come in very handy when specifying the capabilities especially for mobile devices.

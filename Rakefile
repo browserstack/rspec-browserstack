@@ -27,3 +27,10 @@ task :parallel do |t, args|
     Rake::Task["single"].reenable
   end
 end
+
+task :test do |t, args|
+  Rake::Task["single"].invoke
+  Rake::Task["single"].reenable
+  Rake::Task["local"].invoke
+  Rake::Task["parallel"].invoke
+end

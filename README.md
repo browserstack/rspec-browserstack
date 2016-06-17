@@ -4,9 +4,9 @@
 
 ## Setup
 
-Clone the repo
-Install dependencies `bundle install`
-Update `congif.yml` with your BrowserStack credentials `user` and `key`
+- Clone the repo
+- Install dependencies `bundle install`
+- Update `congif.yml` with your BrowserStack credentials `user` and `key`
 
 ### Run the tests
 

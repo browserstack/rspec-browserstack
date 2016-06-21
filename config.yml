@@ -15,3 +15,6 @@ browser_caps:
     "browser": "internet explorer"
   -
     "browser": "safari"
+  -
+    "browser": "chrome"
+    "browserstack.local": true

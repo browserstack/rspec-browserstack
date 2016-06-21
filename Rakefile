@@ -11,6 +11,7 @@ end
 task :default => :single
 
 RSpec::Core::RakeTask.new(:local) do |t|
+  ENV['TASK_ID'] = "4"
   t.pattern = Dir.glob('spec/local_test.rb')
   t.rspec_opts = '--format documentation'
   t.verbose = false

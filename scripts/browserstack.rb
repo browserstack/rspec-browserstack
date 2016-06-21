@@ -11,10 +11,9 @@ TASK_ID = (ENV['TASK_ID'] || 0).to_i
 
 RSpec.configure do |config|
   config.around(:example) do |example|
-    enable_local = example.metadata[:enable_local]
-
     @caps = CONFIG['common_caps'].merge(CONFIG['browser_caps'][TASK_ID])
     @caps["name"] = ENV['name'] || example.metadata[:name] || example.metadata[:file_path].split('/').last.split('.').first
+    enable_local = @caps["browserstack.local"] && @caps["browserstack.local"].to_s == "true"
 
     if enable_local
       @bs_local = BrowserStack::Local.new

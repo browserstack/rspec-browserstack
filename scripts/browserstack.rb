@@ -3,10 +3,12 @@ require 'rspec'
 require 'selenium-webdriver'
 require 'browserstack/local'
 
-CONFIG = YAML.load(File.read(File.join(File.dirname(__FILE__),'../config.yml')))
+TASK_ID = (ENV['TASK_ID'] || 0).to_i
+CONFIG_NAME = ENV['CONFIG_NAME'] || 'single'
+
+CONFIG = YAML.load(File.read(File.join(File.dirname(__FILE__), "../config/#{CONFIG_NAME}.config.yml")))
 CONFIG['user'] = ENV['BROWSERSTACK_USERNAME'] || CONFIG['user']
 CONFIG['key'] = ENV['BROWSERSTACK_ACCESS_KEY'] || CONFIG['key']
-TASK_ID = (ENV['TASK_ID'] || 0).to_i
 
 
 RSpec.configure do |config|

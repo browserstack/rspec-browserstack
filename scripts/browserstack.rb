@@ -17,6 +17,7 @@ RSpec.configure do |config|
     @caps["name"] = ENV['name'] || example.metadata[:name] || example.metadata[:file_path].split('/').last.split('.').first
     enable_local = @caps["browserstack.local"] && @caps["browserstack.local"].to_s == "true"
 
+    # Code to start browserstack local before start of test
     if enable_local
       @bs_local = BrowserStack::Local.new
       bs_local_args = { "key" => CONFIG['key'], "forcelocal" => true }
@@ -32,6 +33,7 @@ RSpec.configure do |config|
       example.run
     ensure 
       @driver.quit
+      # Code to stop browserstack local after end of test
       @bs_local.stop if enable_local
     end
   end

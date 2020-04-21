@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 # gem "rails"
 
-gem "rake"
+gem "rake", "13.0.1"
 gem "selenium-webdriver"
 gem "rspec-core", "~> 3.4.4"
 gem "rspec"

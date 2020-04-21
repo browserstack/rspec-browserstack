@@ -7,7 +7,7 @@ GEM
     diff-lcs (1.2.5)
     ffi (1.11.3)
     parallel (1.9.0)
-    rake (11.1.2)
+    rake (13.0.1)
     rspec (3.4.0)
       rspec-core (~> 3.4.0)
       rspec-expectations (~> 3.4.0)
@@ -32,7 +32,7 @@ PLATFORMS
 DEPENDENCIES
   browserstack-local
   parallel
-  rake
+  rake (= 13.0.1)
   rspec
   rspec-core (~> 3.4.4)
   selenium-webdriver

@@ -3,7 +3,7 @@ user: "BROWSERSTACK_USERNAME"
 key: "BROWSERSTACK_ACCESS_KEY"
 
 common_caps:
-  "build": "rspec-browserstack"
+  "build": "browserstack-build-1"
   "browserstack.debug": true
 
 browser_caps:

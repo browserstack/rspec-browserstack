@@ -12,9 +12,8 @@
 * Update `*.config.yml` files inside the `config/` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
 
 ## Run the tests
-* To run a single test, run `bundle exec rake single`
+* To run tests, run `bundle exec rake parallel`
 * To run local tests, run `bundle exec rake local`
-* To run parallel tests, run `bundle exec rake parallel`
 
  Understand how many parallel sessions you need by using our [Parallel Test Calculator](https://www.browserstack.com/automate/parallel-calculator?ref=github)
 

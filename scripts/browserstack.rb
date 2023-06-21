@@ -14,7 +14,6 @@ CONFIG['key'] = ENV['BROWSERSTACK_ACCESS_KEY'] || CONFIG['key']
 RSpec.configure do |config|
   config.around(:example) do |example|
     @caps = CONFIG['common_caps'].merge(CONFIG['browser_caps'][TASK_ID])
-    @caps["name"] = ENV['name'] || example.metadata[:name] || example.metadata[:file_path].split('/').last.split('.').first
     enable_local = @caps["browserstack.local"] && @caps["browserstack.local"].to_s == "true"
     @caps['browserstack.source']= 'rspec:sample-master:v1.1'
 
